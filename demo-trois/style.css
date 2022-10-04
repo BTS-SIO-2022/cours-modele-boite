@@ -1,0 +1,35 @@
+/* */
+html {
+    box-sizing: border-box;
+}
+
+p, span {
+    font-size: 1em;
+}
+
+.d1 {
+    width: 50%;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.p1 {
+    background-color: blue;
+    width: 100%;
+    height: 50px;
+    border: 10px solid purple;
+    /*
+    Bien que la largeur de mon élément p soit défini en valeur relative (la largeur de p doit faire 100% de la largeur de son élément parent), j'ai un dépassement de p par rapport à son élément parent la div. Ceci est dû au fait que CSS naturellement via la propriété box-sizing définit une largeur et une hauteur sur la boîte de contenu. Donc naturellement, mes éléments ont un box-sizing définit sur la valeur content-box. 
+    Pour modifier ce comportement et faire en sorte que quand je définis une width et une height, CSS prenne à la fois en compte le padding et les border, je modifie la valeur de box-sizing à border-box.
+
+    Lien vers la documentation : https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing
+    */
+    box-sizing: border-box;
+}
+
+.p2 {
+    background-color: blueviolet;
+    width: 100%;
+    height: 25%;
+}
+
